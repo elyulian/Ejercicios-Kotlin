@@ -1,0 +1,50 @@
+import kotlin.random.Random
+
+/*
+generar numero aleaorio entre 0 y 100
+*/
+fun main() {
+
+    var rondas:Int = 0
+    var marcadorUno: Int=0
+    var marcadorDos: Int=0
+    var empates:Int=0
+    var rondasJugadas:Int=0
+        rondas+=1
+
+      while (marcadorUno!=2 || marcadorDos!=2) {
+          var opcionUno : Int=Random.nextInt(1,4)
+          var opcionDos : Int=Random.nextInt(1,4)
+       //   println(marcadorUno)
+         // println(marcadorDos)
+          if (opcionUno==opcionDos){
+              println("Empate")
+          }else if (opcionUno == 1 && opcionDos == 2) {
+              println("Gano Papel")
+              marcadorDos += 1
+          } else if (opcionUno == 1 && opcionDos == 3) {
+              println("Gano Piedra")
+              marcadorUno += 1
+          } else if (opcionUno == 2 && opcionDos == 1) {
+              println("Gano Papel")
+              marcadorDos += 1
+          } else if (opcionUno == 2 && opcionDos == 3) {
+              println("Gano tijera")
+              marcadorDos += 1
+          } else if (opcionUno == 3 && opcionDos == 1) {
+              println("Gano Piedra")
+              marcadorDos += 1
+          } else if (opcionUno == 3 && opcionDos == 2) {
+              println("Gano Tijera")
+              marcadorUno += 1
+          }
+
+          if (marcadorUno==2 || marcadorDos==2){
+              break
+          }
+      }
+  //  println(marcadorUno)
+   // println(marcadorDos)
+
+
+}
